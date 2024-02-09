@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdb74f48ab039794db19af06653ca56f, type: 3}
+  m_Name: MaulStats
+  m_EditorClassIdentifier: 
+  "<\u0130D>k__BackingField": 7
+  <HeroName>k__BackingField: Darth Maul
+  <Health>k__BackingField: 500
+  <Protection>k__BackingField: 100
+  <Speed>k__BackingField: 16
+  <Damage>k__BackingField: 50
+  <CritChance>k__BackingField: 10
+  <Defense>k__BackingField: 5
+  <HealthRegeneration>k__BackingField: 5
+  <DodgeChance>k__BackingField: 5
+  <Potency>k__BackingField: 5
+  <Accuracy>k__BackingField: 5
+  <Tenacity>k__BackingField: 5

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfb03a3490d2f6a4080cc5208da05194, type: 3}
+  m_Name: VaderActions
+  m_EditorClassIdentifier: 
+  <ActionDataArray>k__BackingField:
+  - actionType: 0
+    actionCooldown: 0
+    actionName: BA
+    actionImage: {fileID: 21300000, guid: c5e9715ca16b7ee4aaff08ac4a0f3494, type: 3}
+    performPosition: 2
+  - actionType: 1
+    actionCooldown: 3
+    actionName: SP1
+    actionImage: {fileID: 21300000, guid: 5a9af58acc8567148a1c52860e1bf59e, type: 3}
+    performPosition: 1
+  - actionType: 2
+    actionCooldown: 3
+    actionName: SP2
+    actionImage: {fileID: 21300000, guid: eab22c7cc6a851d49973ac7edb58a429, type: 3}
+    performPosition: 0
+  - actionType: 3
+    actionCooldown: 3
+    actionName: SP3
+    actionImage: {fileID: 21300000, guid: 2bf123aa7ce230d48b7384ef08f4e696, type: 3}
+    performPosition: 0

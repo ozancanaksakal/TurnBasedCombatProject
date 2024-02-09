@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54fe848c42c079a4e89d7c11823628b6, type: 3}
+  m_Name: StatusData
+  m_EditorClassIdentifier: 
+  statusDatas:
+  - statusType: 0
+    sprite: {fileID: 21300000, guid: 024fc260382f49745a0c12138560490c, type: 3}
+  - statusType: 1
+    sprite: {fileID: 21300000, guid: 0a71fbf58fe92bd4c82adaf7beef10cf, type: 3}
+  - statusType: 2
+    sprite: {fileID: 21300000, guid: 8034bba608dfb464eb5883e7e2f3f469, type: 3}
+  - statusType: 3
+    sprite: {fileID: 21300000, guid: 402a9a6d34f534d4aa78323f9672c9ac, type: 3}
+  - statusType: 4
+    sprite: {fileID: 21300000, guid: 161283c412faff04ba58235195a08ba3, type: 3}
+  - statusType: 5
+    sprite: {fileID: 21300000, guid: 161283c412faff04ba58235195a08ba3, type: 3}
+  - statusType: 6
+    sprite: {fileID: 21300000, guid: fd36340f70cf0ab4b90c88536fa040ea, type: 3}
+  - statusType: 7
+    sprite: {fileID: 21300000, guid: fd36340f70cf0ab4b90c88536fa040ea, type: 3}
+  - statusType: 10
+    sprite: {fileID: 21300000, guid: 6b035a0a334761a4a9a602d559eaf7ea, type: 3}
+  - statusType: 11
+    sprite: {fileID: 21300000, guid: 6b035a0a334761a4a9a602d559eaf7ea, type: 3}
+  - statusType: 12
+    sprite: {fileID: 21300000, guid: 2b57e1609f246f84f9cac049c573cd71, type: 3}
+  - statusType: 13
+    sprite: {fileID: 21300000, guid: 2b57e1609f246f84f9cac049c573cd71, type: 3}
+  - statusType: 14
+    sprite: {fileID: 21300000, guid: 0f7035728a3f40a4ca6e13d3d31f2291, type: 3}
+  - statusType: 15
+    sprite: {fileID: 21300000, guid: c8d338b256c7ae54380f9111ee441f94, type: 3}
+  - statusType: 16
+    sprite: {fileID: 21300000, guid: 514dde79638b6794a81516a9f4284eb7, type: 3}
+  - statusType: 17
+    sprite: {fileID: 21300000, guid: 42d0d8267411b8c4fbf0492df2d0597a, type: 3}
+  - statusType: 18
+    sprite: {fileID: 21300000, guid: 7ca96683dccce124f9dc5241b4831fc7, type: 3}
+  buffColor: {r: 0.18195976, g: 0.8207547, b: 0.3147785, a: 0}
+  debuffColor: {r: 0.9339623, g: 0.14538093, b: 0.14538093, a: 0}

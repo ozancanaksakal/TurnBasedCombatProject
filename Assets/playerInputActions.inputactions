@@ -1,0 +1,54 @@
+{
+    "name": "playerInputActions",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "68c791ed-995f-43c3-9ad5-7097bb24d797",
+            "actions": [
+                {
+                    "name": "Press",
+                    "type": "Button",
+                    "id": "fd7508ae-4c5f-4c53-8aa2-baafc3161d20",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PressPosition",
+                    "type": "Value",
+                    "id": "0cf43ffd-e4ff-494b-97ef-6af3768e91df",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7d48ace5-2aae-44c2-a408-fdbe1fdff9cb",
+                    "path": "<Touchscreen>/primaryTouch/press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5d679427-e7f7-42cc-9baa-296588d68c02",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PressPosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
