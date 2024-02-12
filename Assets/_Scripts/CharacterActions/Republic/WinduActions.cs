@@ -5,8 +5,6 @@ public class WinduActions : HeroActions, IAssistable {
     public Hero AsisstantHero { get; set; }
     private bool HasResilientDefense = false;
 
-    
-
     protected override void CreateHeroActions() {
 
         ActionVisualData basicActionVD = new(actionSprites[0],
@@ -40,7 +38,7 @@ public class WinduActions : HeroActions, IAssistable {
 
     private void MyHero_OnDamaged() {
 
-        if (HasStatus(myHero, StatusType.ResilientDefense) && !HasStatus(myHero,StatusType.Stun)) {
+        if (HasStatus(myHero, StatusType.ResilientDefense) ) {
             PerformCounterAttack();
         }
     }
@@ -63,7 +61,6 @@ public class WinduActions : HeroActions, IAssistable {
         ApplyBuff<ResilientDefense>(myHero, StatusType.ResilientDefense);
         HasResilientDefense = true;
     }
-
 
     protected override void BasicAction() {
         Hero target = heroManager.TargetHero;

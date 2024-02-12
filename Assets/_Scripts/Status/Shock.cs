@@ -6,7 +6,7 @@
     public override bool IsBuff => false;
 
     private void Start() {
-        hero.HeroActions.OnActionStarted += TryDestroyStatus;
+        hero.OnMyTurn += TryDestroyStatus;
     }
 
     protected override void OnDestroy() {

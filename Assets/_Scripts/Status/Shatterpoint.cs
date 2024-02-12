@@ -16,10 +16,7 @@
     }
 
     private void HeroActions_OnAnyActionCompleted() {
-        Destroy(this);
+        TryDestroyStatus();
     }
 
-    public override void UpdateDuration(int value) {
-        duration += value;
-    }
 }

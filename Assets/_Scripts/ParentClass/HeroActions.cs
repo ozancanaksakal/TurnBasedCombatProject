@@ -138,7 +138,7 @@ public abstract class HeroActions : MonoBehaviour {
         if (isHit) {
             bool isCritic = myHero.IsCritic();
             float actualDamage = isCritic ? 1.5f * damageAmount : damageAmount;
-            heroManager.TargetHero.TakeDamage(actualDamage);
+            target.TakeDamage(actualDamage);
         }
         return isHit;
     }
@@ -156,7 +156,7 @@ public abstract class HeroActions : MonoBehaviour {
         if (isHit) {
             ifHitisCritic = myHero.IsCritic();
             float actualDamage = ifHitisCritic ? 1.5f * damageAmount : damageAmount;
-            heroManager.TargetHero.TakeDamage(actualDamage);
+            target.TakeDamage(actualDamage);
         }
 
         return isHit;

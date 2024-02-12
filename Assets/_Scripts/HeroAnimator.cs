@@ -10,7 +10,7 @@ public class HeroAnimator : MonoBehaviour {
     private State state;
     private Vector3 initialPosition;
     private Vector3 initialForwardVector;
-    private float speed = 7;
+    private float speed = 6f;
     private Hero myHero;
 
     private int isMovingHash;
@@ -57,7 +57,6 @@ public class HeroAnimator : MonoBehaviour {
         SetState(State.Preparing);
         //Debug.Log(performerAction);
     }
-
 
     private void SetState(State newState) {
         state = newState;

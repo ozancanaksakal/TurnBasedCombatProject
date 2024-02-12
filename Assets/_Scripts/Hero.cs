@@ -166,7 +166,7 @@ public class Hero : MonoBehaviour {
 
     public HeroSO GetMyProperties() { return myProps; }
 
-    public void OnCallToAssist() => HeroActions.GetAction(ActionType.Basic).StartAction();
+    public void OnCallToBasicAttack() => HeroActions.GetAction(ActionType.Basic).StartAction();
 
     private void InitStats() {
         health = myProps.Health;

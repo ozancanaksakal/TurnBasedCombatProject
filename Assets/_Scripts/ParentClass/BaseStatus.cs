@@ -9,11 +9,6 @@ public abstract class BaseStatus : MonoBehaviour {
     public abstract int DefaultDuration { get; }
     public abstract bool IsBuff { get; }
 
-    //public int Duration { get { return duration; } 
-    //    set { duration = value;
-    //    }
-    //}
-
     protected Hero hero;
     protected int duration;
 

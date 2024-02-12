@@ -6,7 +6,7 @@ public class MaulActions : HeroActions {
 
     protected override void CreateHeroActions() {
         ActionVisualData basicActionVD = new(actionSprites[0],
-            ActionPosition.TargetHero, 1.5f, 0.3f, true);
+            ActionPosition.TargetHero, 1.5f, 0.7f, true);
         ActionVisualData special1ActionVD = new(actionSprites[1],
             ActionPosition.Center, 1.5f, 0.3f, true);
 

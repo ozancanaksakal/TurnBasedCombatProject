@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour {
     private void Awake() {
         buttonContainer.gameObject.SetActive(false);
         TurnSystem.Instance.OnInTurnHeroChanged += TurnSystem_OnInTurnCharacterChanged;
-        // TurnSystem in once (execution order)  calistigi bilindigi icin event hata olusturmaz
+        // TurnSystem'in once (execution order)  calistigi bilindigi icin event hata olusturmaz
     }
 
     private void Start() {

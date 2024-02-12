@@ -23,6 +23,9 @@ public class ActionButtonUI : MonoBehaviour {
         HeroManager.Instance.OnWaitForChooseAlly += HeroManager_OnWaitForChooseAlly;
         SetButtonVisual();
     }
+    private void OnDestroy() {
+        HeroManager.Instance.OnWaitForChooseAlly -= HeroManager_OnWaitForChooseAlly;
+    }
 
     private void HeroManager_OnWaitForChooseAlly(ActionType actionType) {
         if (baseAction.actionType == actionType) {

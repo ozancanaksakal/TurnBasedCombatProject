@@ -7,7 +7,7 @@ public class AhsokaActions : HeroActions {
         ActionVisualData basicActionVD = new(actionSprites[0],
             ActionPosition.TargetHero, 1.5f, 1f, true);
         ActionVisualData special1ActionVD = new(actionSprites[1],
-            ActionPosition.TargetHero, 2.433f, 0.7f, true);
+            ActionPosition.TargetHero, 2.433f, 1.3f, true);
 
         BaseAction basicAction = new(ActionType.Basic, 0, BasicAction,
             StartAction, CompleteAction, basicActionVD);

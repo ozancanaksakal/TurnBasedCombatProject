@@ -56,14 +56,21 @@ public class HeroManager : MonoBehaviour {
     private void HeroActions_OnAnyActionCompleted() {
         lastAttackedHeroes[InTurnHero.IsDarkSide] = targetHero;
         if (inQueueAssistList.Count != 0) {
-            
-            inQueueAssistList[0].OnCallToAssist();
+
+            inQueueAssistList[0].OnCallToBasicAttack();
             inQueueAssistList.RemoveAt(0);
         }
-        else if(inQueueCounterList.Count != 0 ){
+        else if (inQueueCounterList.Count != 0) {
+            bool isTargetStun = HeroActions.HasStatus(targetHero, StatusType.Stun);
+            Debug.Log("CounterHero stun is " + isTargetStun);
             targetHero = InTurnHero;
-            inQueueCounterList[0].OnCallToAssist();
+            Hero hero = inQueueCounterList[0];
             inQueueCounterList.RemoveAt(0);
+            if (!isTargetStun)
+                hero.OnCallToBasicAttack();
+            else
+                TurnSystem.Instance.GoToNextTurn();
+
         }
         else {
             TurnSystem.Instance.GoToNextTurn();
@@ -128,13 +135,21 @@ public class HeroManager : MonoBehaviour {
     }
 
     private void SetTargetHero() {
-        Hero lastAttackedHero = lastAttackedHeroes[InTurnHero.IsDarkSide];
 
-        if (lastAttackedHero != null) { targetHero = lastAttackedHero; }
+        var priorityTargetList = priorityTargets[InTurnHero.IsDarkSide];
+        if (priorityTargetList.Count != 0) {
+            targetHero = priorityTargetList[0];
+        }
+
         else {
-            var rivalList = GetRivalList(InTurnHero.IsDarkSide);
-            int randomIndex = UnityEngine.Random.Range(0, rivalList.Count);
-            targetHero = rivalList[randomIndex];
+            Hero lastAttackedHero = lastAttackedHeroes[InTurnHero.IsDarkSide];
+
+            if (lastAttackedHero != null) { targetHero = lastAttackedHero; }
+            else { // choose random hero
+                var rivalList = GetRivalList(InTurnHero.IsDarkSide);
+                int randomIndex = UnityEngine.Random.Range(0, rivalList.Count);
+                targetHero = rivalList[randomIndex];
+            }
         }
 
         OnTargetHeroSelected?.Invoke();
@@ -168,7 +183,6 @@ public class HeroManager : MonoBehaviour {
                 hero.transform.position = teamA.GetChild(0).position;
             else {
                 lightSideTeam[i].transform.position = teamA.GetChild(positionIndex).position;
-                Debug.Log(positionIndex);
                 positionIndex++;
             }
         }
@@ -183,27 +197,6 @@ public class HeroManager : MonoBehaviour {
             }
         }
 
-        //foreach (Transform transform in teamA) {
-        //    Hero hero = lightSideTeam[index];
-        //    if (hero.GetMyProperties().ID == CharID.Yoda)
-        //        hero.transform.position = teamA.GetChild(0).position;
-
-        //    else
-        //        lightSideTeam[index].transform.position = transform.position;
-
-        //    index++;
-        //    if (index == lightSideTeam.Count)
-        //        break;
-        //}
-        //index = 0;
-        //foreach (Transform transform in teamB) {
-        //    darkSideTeam[index].transform.position = transform.position;
-        //    index++;
-        //    if (index == darkSideTeam.Count)
-        //        break;
-        //}
-        //Destroy(teamA.gameObject);
-        //Destroy(teamB.gameObject);
     }
 
     public void RemoveFromTeamList(Hero hero) {
